@@ -2,7 +2,7 @@
 Creating a MachineSet to build and scale nodes on VMware 6.7U3 and OCP 4.6
 
 Ref: \
-YouTube Video  \
+YouTube Video  https://youtu.be/3no-WT557ls \
 OCP Documentation - https://docs.openshift.com/container-platform/4.6/machine_management/creating-infrastructure-machinesets.html
 
 I usally recommend backing up a copy of one of your worker mainifest during install time to make this a bit easier, but you can use the templates found in the documentation to create your instance(s), per your environment.
