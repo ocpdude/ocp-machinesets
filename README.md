@@ -13,7 +13,7 @@ I usally recommend backing up a copy of one of your worker mainifest during inst
 2. Edit (or Create) your MachineSet yaml. \
 `vi 99_openshift-cluster-api_worker-machineset-0.yaml`
 
-3. In VMware, pay particutlar attention to the "workspace" section, in my video, I did not have a "Resource Pool", you may otherwise the inframtion will be what you completed as part of your install-config.yaml
+3. In VMware, pay particutlar attention to the "workspace" section. In my video, I said that I did not have a "Resource Pool" so I had to remove that section. Otherwise the information will be what you completed as part of your install-config.yaml.
     ```
     workspace:
       datacenter: <vcenter_datacenter_name> 
@@ -23,7 +23,7 @@ I usally recommend backing up a copy of one of your worker mainifest during inst
       server: <vcenter_server_ip
     ```
 
-4. You also should include a label for your machine "role", here again I was using "infra" in the video. If you do not include a specific role, it will default to "worker" only. 
+4. You also should include a label for your machine "role", here again I was using "infra" in the video. If you do not include a specific role, it will default to "worker". 
     ``` 
     spec:
         metadata:
@@ -41,12 +41,12 @@ I usally recommend backing up a copy of one of your worker mainifest during inst
     devices:
         - networkName: "<vm_network_name>" 
     ```
-    and your template name. 
+    and your template name... ie, the VM cloning source image name.
     ```
     template: <vm_template_name>
     ```
 
-6. Make sure your userDataSecret remains unchanged.
+6. Make sure your userDataSecret remains unchanged since it holds the ignition data.
     ```
     userDataSecret:
     name: worker-user-data
