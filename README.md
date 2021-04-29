@@ -5,7 +5,7 @@ Ref: \
 YouTube Video  https://youtu.be/3no-WT557ls \
 OCP Documentation - https://docs.openshift.com/container-platform/4.6/machine_management/creating-infrastructure-machinesets.html
 
-I usally recommend backing up a copy of one of your worker mainifest during install time to make this a bit easier, but you can use the templates found in the documentation to create your instance(s), per your environment.
+I usually recommend backing up a copy of one of your worker mainifest during install time to make this a bit easier, but you can use the templates found in the documentation to create your instance(s), per your environment.
 
 1. Retrieve your unique infrastrutor id. \
 `oc get -o jsonpath='{.status.infrastructureName}{"\n"}' infrastructure cluster`
